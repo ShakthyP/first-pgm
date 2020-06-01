@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int n,x;
+scanf("%d %d",&n,&x);
+int a[n];
+for(int i=0;i<n;i++)
+  scanf("%d ",&a[i]);
+int s=0,c=0;
+for(int i=0;i<n;i++)
+{
+    for(int j=i+1;j<n;j++)
+    {
+        s=a[i]+a[j];
+        if(s==x)
+          c++;
+    }
+}
+if(c!=0)
+  printf("yes");
+else 
+  printf("no");
+}
